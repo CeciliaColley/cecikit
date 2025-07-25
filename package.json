@@ -1,0 +1,24 @@
+{
+  "name": "cecikit",
+  "version": "1.0.0",
+  "description": "Expansion of Playwright's Page Object Model with additional features and utilities.",
+  "keywords": ["playwright", "testing", "page-object"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CeciliaColley/cecikit.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.44.0"
+  }
+}
+

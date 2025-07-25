@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    /* output */
+    "outDir": "dist",
+    "declaration": true,
+
+    /* language / module */
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    /* safety */
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "../tests/keys/buttonKey.ts", "../tests/keys/redToastKey.ts", "../tests/keys/iconKey.ts", "../tests/keys/inputKey.ts", "../tests/keys/linkKey.ts"]
+}
