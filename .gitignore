@@ -1,0 +1,9 @@
+# compiled output and dependencies
+dist/
+node_modules/
+
+# misc
+.DS_Store
+npm-debug.log*
+dist/
+node_modules/
