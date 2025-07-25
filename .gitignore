@@ -1,9 +1,10 @@
-# compiled output and dependencies
+# build output
 dist/
+
+# dependencies
 node_modules/
 
-# misc
+# OS / tool cruft
 .DS_Store
 npm-debug.log*
-dist/
-node_modules/
+
