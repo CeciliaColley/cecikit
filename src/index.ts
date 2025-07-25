@@ -12,3 +12,6 @@ export * from "./types";
 export {testRequiredField} from "./helpers/testRequiredField";
 export {testLink} from "./helpers/testLink";
 export {triggerPopup} from "./helpers/triggerPopUp";
+
+// Helper function to pick specific keys from a catalogue object
+export {pickBlueprint} from "./helpers/pickBlueprint";
