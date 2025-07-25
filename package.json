@@ -1,6 +1,6 @@
 {
   "name": "cecikit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Expansion of Playwright's Page Object Model with additional features and utilities.",
   "keywords": [
     "playwright",
