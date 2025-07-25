@@ -23,6 +23,8 @@ export function buttonFactory(
     const button = {
       button: bp.button(page),
       ...(clickAndWait && { clickAndWait }),
+      url: bp.url,
+
     };
 
     basket[key] = button;
