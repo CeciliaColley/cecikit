@@ -1,8 +1,8 @@
 import { Locator } from "@playwright/test";
 
 export type Icon = {
-    position: number;
     target: Locator;
+    position: number;
     text: string;
     url: RegExp;
 }
