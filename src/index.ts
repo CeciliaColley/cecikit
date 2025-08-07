@@ -9,9 +9,10 @@ export {toastFactory} from "./factories/toastFactory";
 export * from "./types";
 
 // Helpers for testing specific UI functionalities
-export {testRequiredField} from "./helpers/testRequiredField";
+export {getTarget} from "./helpers/getTarget"
+export {pickBlueprint} from "./helpers/pickBlueprint"
 export {testRedirect as testLink} from "./helpers/testRedirect";
+export {testRequiredField} from "./helpers/testRequiredField";
 export {triggerPopup} from "./helpers/triggerPopUp";
 
-// Helper function to pick specific keys from a catalogue object
-export {pickBlueprint} from "./helpers/pickBlueprint";
+
