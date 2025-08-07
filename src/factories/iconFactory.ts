@@ -8,14 +8,15 @@ export function iconFactory(
   const basket: Record<string, Icon> = {};
 
   for (const key in iconsPreview) {
+
     const blueprint = iconsPreview[key];
 
-    const icon = {
-      position: blueprint.position,
-      target: blueprint.target(page),
-      text: blueprint.text,
-      url: blueprint.url,
-    };
+    const icon: Icon = {target: blueprint.target(page)};
+    
+    if(blueprint.position) {icon.position = blueprint.position};
+    if(blueprint.text) {icon.text = blueprint.text};
+    if(blueprint.url) {icon.url = blueprint.url};
+    if(blueprint.newTab) {icon.newTab = blueprint.newTab};
     basket[key] = icon;
   }
 

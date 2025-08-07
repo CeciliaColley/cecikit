@@ -10,22 +10,22 @@ export function buttonFactory(
   for (const key in buttonsPreview) {
     const bp = buttonsPreview[key];
 
-    const clickAndWait = async () => {
-      if (!bp.endpoint) throw new Error("An endpoint must be provided to click and wait.")
-      const wait = page.waitForResponse(
-        (r) => r.url().includes(bp.endpoint!) && r.status() === 200
-      );
-      await bp.button(page).click();
-      return wait;
-    };
+    const btn: Button = { target: bp.button(page) };
+    
+    if (bp.endpoint) {
+      btn.clickAndWait = async () => {
+        const wait = page.waitForResponse(
+          r => r.url().includes(bp.endpoint!) && r.status() === 200
+        );
+        await bp.button(page).click();
+        return wait;
+      };
+    }
 
-    const button = {
-      target: bp.button(page),
-      clickAndWait: clickAndWait,
-      url: bp.url,
-    };
+    if (bp.url)    btn.url    = bp.url;
+    if (bp.newTab) btn.newTab = bp.newTab;
 
-    basket[key] = button;
+    basket[key] = btn;
   }
 
   return basket;

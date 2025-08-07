@@ -4,4 +4,5 @@ export type Button = {
     target: Locator,
     clickAndWait?: () => Promise<Response>,
     url?: RegExp,
+    newTab?: boolean,
 }

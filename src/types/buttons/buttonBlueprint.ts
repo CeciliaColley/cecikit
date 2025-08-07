@@ -4,4 +4,5 @@ export type ButtonBlueprint = {
     button: (page: Page) => Locator;
     endpoint?: string;
     url?: RegExp;
+    newTab?: boolean,
 }

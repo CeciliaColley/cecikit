@@ -10,7 +10,7 @@ export * from "./types";
 
 // Helpers for testing specific UI functionalities
 export {testRequiredField} from "./helpers/testRequiredField";
-export {testLink} from "./helpers/testLink";
+export {testRedirect as testLink} from "./helpers/testRedirect";
 export {triggerPopup} from "./helpers/triggerPopUp";
 
 // Helper function to pick specific keys from a catalogue object

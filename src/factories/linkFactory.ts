@@ -10,11 +10,14 @@ export function linkFactory(
   for (const key in linksPreview) {
     const blueprint = linksPreview[key];
 
-    basket[key] = {
+    const link: Link  = {
       target: blueprint.target(page),
       url: blueprint.url,
-      newTab: blueprint.newTab,
     };
+
+    if(blueprint.newTab) {link.newTab = blueprint.newTab};
+
+    basket[key] = link;
   }
 
   return basket;
